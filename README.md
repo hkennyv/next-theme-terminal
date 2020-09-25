@@ -1,3 +1,9 @@
+# next-theme-terminal
+
+This repository is a NextJS port of [hugo-theme-terminal](https://github.com/panr/hugo-theme-terminal).
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
