@@ -11,16 +11,14 @@ export default function Layout({ children, pageTitle, config, ...props }) {
 
         <title>{pageTitle || ""}</title>
       </Head>
-      <body className={config.params.color}>
-        <div className={"container headings--one-size"}>
-          {/* Header */}
-          <Header />
-          <div className="content">
-            {/* block main */}
-            {children}
-          </div>
+      <div className={"container headings--one-size"}>
+        {/* Header */}
+        <Header logoText="Terminal" menuItems={[]} />
+        <div className="content">
+          {/* block main */}
+          {children}
         </div>
-      </body>
+      </div>
       {/* Footer */}
     </>
   );

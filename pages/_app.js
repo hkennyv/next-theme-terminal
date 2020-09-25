@@ -1,4 +1,4 @@
-// import "../assets/css/color/blue.css";
+import "../assets/css/color/green.css";
 import "../assets/css/style.css";
 
 function MyApp({ Component, pageProps }) {
