@@ -1,5 +1,3 @@
-import matter from "gray-matter";
-
 import { parseMarkdownFiles } from "@utils/utils";
 
 import Layout from "@components/Layout";
@@ -25,7 +23,7 @@ export async function getStaticProps() {
 
   // collect all of the markdown files in /content and transform them using
   // gray-matter to parse the YAML header and the markdown body
-  let ctx = require.context("../content", true, /\.md$/);
+  let ctx = require.context("../content/posts", true, /\.md$/);
   const posts = parseMarkdownFiles(ctx);
 
   return {

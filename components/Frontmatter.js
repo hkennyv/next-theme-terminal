@@ -1,5 +1,5 @@
-export default function PostHead({ post, onList }) {
-  const { frontmatter, markdownBody } = post;
+export default function Frontmatter({ post }) {
+  const { frontmatter } = post;
   const { author, cover, date, description, title } = frontmatter;
 
   return (
