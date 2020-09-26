@@ -1,8 +1,9 @@
 module.exports = {
   plugins: [
+    "postcss-color-mod-function",
     "postcss-flexbugs-fixes",
     "postcss-mixins",
-    "postcss-color-mod-function",
+    "postcss-nested",
     [
       "postcss-preset-env",
       {
