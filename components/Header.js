@@ -1,6 +1,9 @@
+import { useState } from "react";
 import Link from "next/link";
 
 export default function Header({ logoText, menuLinks, menuMoreLinks }) {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <header className="header">
       <div className="header__inner">
@@ -23,8 +26,13 @@ export default function Header({ logoText, menuLinks, menuMoreLinks }) {
             </li>
           ))}
           <ul className="menu__sub-inner">
-            <li className="menu__sub-inner-more-trigger">Show more ▾</li>
-            <ul className="menu__sub-inner-more hidden">
+            <li
+              className="menu__sub-inner-more-trigger"
+              onClick={() => setShowMore((prev) => !prev)}
+            >
+              Show more ▾
+            </li>
+            <ul className={`menu__sub-inner-more${showMore ? "" : " hidden"}`}>
               {menuMoreLinks.map((link) => (
                 <li key={link}>
                   <Link href={link}>
