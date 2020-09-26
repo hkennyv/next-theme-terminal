@@ -8,12 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "gray-matter": "^4.0.2",
     "next": "9.5.3",
     "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-mixins": "6.2.3",
     "postcss-nested": "4.2.3",
     "postcss-preset-env": "^6.7.0",
+    "raw-loader": "^4.0.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-markdown": "^4.3.1"
   }
 }
