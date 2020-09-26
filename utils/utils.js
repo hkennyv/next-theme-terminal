@@ -1,5 +1,7 @@
 import matter from "gray-matter";
 
+export function parseMarkdownFile() {}
+
 /*
  * inputs a webpack.context object of markdown files and returns an array of
  * objects, each containing the frontmatter, markdownBody, and slug for the
@@ -22,6 +24,23 @@ export function parseMarkdownFiles(context) {
       markdownBody: document.content,
       slug,
     };
+  });
+
+  return data;
+}
+
+/*
+ * inputs a webpack.context object of markdown files and returns an array of
+ * slugs, generated from the keys
+ *
+ * i.e. "myblogpost.md" => "myblogpost"
+ */
+export function getMarkdownSlugs(context) {
+  const keys = context.keys();
+
+  const data = keys.map((key, idx) => {
+    const slug = key.replace(/^.*[\\\/]/, "").slice(0, -3);
+    return slug;
   });
 
   return data;
