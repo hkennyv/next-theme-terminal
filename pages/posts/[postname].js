@@ -15,7 +15,7 @@ export default function Post({ config, post }) {
       pageTitle={`${frontmatter.title} :: ${config.name}`}
     >
       <div className="post">
-        <Frontmatter post={post}/>
+        <Frontmatter post={post} root={"/posts"} />
         <ReactMarkdown source={markdownBody} />
       </div>
     </Layout>

@@ -1,11 +1,15 @@
-export default function Frontmatter({ post }) {
-  const { frontmatter } = post;
+import Link from "next/link";
+
+export default function Frontmatter({ post, root }) {
+  const { frontmatter, slug } = post;
   const { author, cover, date, description, title } = frontmatter;
 
   return (
     <>
       <h1 className="post-title">
-        <a href={post.url}>{title}</a>
+        <Link href={`${root}/${slug}`}>
+          <a>{title}</a>
+        </Link>
       </h1>
       <div className="post-meta">
         <span className="post-date">{date}</span>
