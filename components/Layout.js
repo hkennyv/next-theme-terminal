@@ -12,8 +12,14 @@ export default function Layout({ children, pageTitle, config, ...props }) {
         <title>{pageTitle || ""}</title>
       </Head>
       <div className={"container headings--one-size"}>
-        {/* Header */}
-        <Header logoText="Terminal" menuItems={[]} />
+        {/* Header TODO: make `menuLinks` and `menuMoreLinks` either come from config
+         * or come from dynamically finding the paths in `pages/`
+         */}
+        <Header
+          logoText="Terminal"
+          menuLinks={["/about", "/showcase"]}
+          menuMoreLinks={["/extra"]}
+        />
         <div className="content">
           {/* block main */}
           {children}

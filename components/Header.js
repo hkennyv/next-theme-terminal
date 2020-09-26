@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Header({ logoText, menuItems }) {
+export default function Header({ logoText, menuLinks, menuMoreLinks }) {
   return (
     <header className="header">
       <div className="header__inner">
@@ -13,15 +13,27 @@ export default function Header({ logoText, menuItems }) {
         <div className="menu-trigger hidden">menu</div>
       </div>
       {/* site.menus => menu.html */}
-      <nav className="mneu">
+      <nav className="menu">
         <ul className="menu__inner menu__inner--desktop">
-          {menuItems.map((item, i) => (
-            <li>
-              <Link href={item}>
-                <a>{item}</a>
+          {menuLinks.map((link) => (
+            <li key={link}>
+              <Link href={link}>
+                <a>{link}</a>
               </Link>
             </li>
           ))}
+          <ul className="menu__sub-inner">
+            <li className="menu__sub-inner-more-trigger">Show more ▾</li>
+            <ul className="menu__sub-inner-more hidden">
+              {menuMoreLinks.map((link) => (
+                <li key={link}>
+                  <Link href={link}>
+                    <a>{link}</a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </ul>
         </ul>
         <ul className="menu__inner menu__inner--mobile">{/*  */}</ul>
       </nav>
