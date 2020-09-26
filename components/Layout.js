@@ -9,7 +9,7 @@ export default function Layout({ children, pageTitle, config, ...props }) {
       <Head>
         <Meta description={config.description} keywords={config.keywords} />
 
-        <title>{pageTitle || ""}</title>
+        <title>{pageTitle || config.name}</title>
       </Head>
       <div className={"container headings--one-size"}>
         {/* Header TODO: make `menuLinks` and `menuMoreLinks` either come from config
