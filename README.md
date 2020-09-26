@@ -1,6 +1,10 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a1d39bd7-cb99-4836-84c7-faf67832905f/deploy-status)](https://app.netlify.com/sites/silly-rosalind-354c27/deploys)
+
 # next-theme-terminal
 
 This repository is a NextJS port of [hugo-theme-terminal](https://github.com/panr/hugo-theme-terminal).
+
+### DEMO - https://hopeful-minsky-25f7e0.netlify.app/
 
 ---
 
