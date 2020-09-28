@@ -110,7 +110,7 @@ I'd like to keep this mostly in parity with the original hugo theme by
 please follow the [instructions here](https://github.com/panr/hugo-theme-terminal#new-cool-idea-or-feature-)
 so we can get it into the original theme and this port will follow suit.
 
-# License
+## License
 
 Copyright © 2019-2020 Radosław Kozieł ([@panr](https://twitter.com/panr)) and Kenny Huynh ([@hkennyv](https://github.com/hkennyv)).
 
