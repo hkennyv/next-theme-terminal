@@ -1,11 +1,34 @@
 {
-  "name": "Terminal",
-  "description": "A simple, retro theme for NextJS.",
+  "title": "Terminal",
+  "subtitle": "A simple, retro theme for NextJS.",
+  "keywords": ["nextjs", "theme", "retro"],
+  "copyright": "",
   "homepage": "https://github.com/hkennyv/next-theme-terminal",
   "params": {
-    "color": "orange",
+    "themeColor": "green",
     "showMenuItems": 2,
     "fullWidthTheme": false,
     "centerTheme": false
-  }
+  },
+  "logo": {
+    "logoText": "Terminal",
+    "logoHomeLink": "/"
+  },
+  "menu": [
+    {
+      "identifier": "about",
+      "name": "About",
+      "url": "/about"
+    },
+    {
+      "identifier": "showcase",
+      "name": "Showcase",
+      "url": "/showcase"
+    },
+    {
+      "identifier": "extra",
+      "name": "Extra",
+      "url": "/extra"
+    }
+  ]
 }

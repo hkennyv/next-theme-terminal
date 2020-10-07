@@ -5,28 +5,37 @@ import Header from "@components/Header";
 import Meta from "@components/Meta";
 
 export default function Layout({ children, pageTitle, config, ...props }) {
+  const {
+    title,
+    subtitle,
+    keywords,
+    copyright,
+    homepage,
+    logo,
+    menu,
+    params,
+  } = config;
+
   return (
     <>
       <Head>
-        <Meta description={config.description} keywords={config.keywords} />
+        <Meta description={subtitle} keywords={keywords} />
 
-        <title>{pageTitle || config.name}</title>
+        <title>{pageTitle || title}</title>
       </Head>
       <div className={"container headings--one-size"}>
-        {/* Header TODO: make `menuLinks` and `menuMoreLinks` either come from config
-         * or come from dynamically finding the paths in `pages/`
-         */}
         <Header
-          logoText="Terminal"
-          menuLinks={["/about", "/showcase"]}
-          menuMoreLinks={["/extra"]}
+          logoText={logo.logoText}
+          logoHomeLink={logo.logoHomeLink}
+          menuItems={menu}
+          showMenuItems={params.showMenuItems}
         />
         <div className="content">
           {/* block main */}
           {children}
         </div>
         {/* Footer */}
-        <Footer />
+        <Footer copyright={copyright} />
       </div>
     </>
   );

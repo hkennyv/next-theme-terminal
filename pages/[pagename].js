@@ -12,7 +12,7 @@ export default function Page({ config, post }) {
   return (
     <Layout
       config={config}
-      pageTitle={`${frontmatter.title} :: ${config.name}`}
+      pageTitle={`${frontmatter.title} :: ${config.title}`}
     >
       <div className="post">
         <Frontmatter post={post} root={""} />

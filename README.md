@@ -124,10 +124,16 @@ parity with the original theme. Contributions welcome 😊
 
 - [ ] finish filling out meta tags in <head>
 - [ ] finish filling out README
+  - [x] instructions on getting started
+  - [ ] instructions for development
+  - [ ] instructions on adding new content
+  - [ ] customization instructions
 - [ ] configuration parity of `siteconfig.json` with `config.toml`
   - [ ] color
-  - [ ] 
+  - [x] menu configuration
+  - [ ] pagination
 - [ ] pagination for post
+- [ ] tags page
 - [x] footer
 - [x] front-matter support
   - [x] title

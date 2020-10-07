@@ -18,7 +18,7 @@ export default function Frontmatter({ post, root }) {
       <span className="post-tags">
         {tags &&
           tags.map((tag) => (
-            <Link href={`/tags/${tag}`}>
+            <Link key={tag} href={`/tags/${tag}`}>
               <a>#{tag}</a>
             </Link>
           ))}
