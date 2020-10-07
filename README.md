@@ -125,7 +125,10 @@ parity with the original theme. Contributions welcome 😊
 - [ ] finish filling out meta tags in <head>
 - [ ] finish filling out README
 - [ ] configuration parity of `siteconfig.json` with `config.toml`
+  - [ ] color
+  - [ ] 
 - [ ] pagination for post
+- [x] footer
 - [x] front-matter support
   - [x] title
   - [x] date
@@ -133,6 +136,7 @@ parity with the original theme. Contributions welcome 😊
   - [x] cover
   - [x] tags
   - [x] description
+- [ ] BUG: accent doesn't seem to be getting set for certain CSS classes (code tags, post-meta class)
 - [ ] add-ons (disqus comments, extended header, extended footer)
 - [ ] syntax highlighting for code
 - [ ] mobile responsiveness
