@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Frontmatter({ post, root }) {
   const { frontmatter, slug } = post;
-  const { author, cover, date, description, title } = frontmatter;
+  const { author, cover, date, description, tags, title } = frontmatter;
 
   return (
     <>
@@ -13,8 +13,16 @@ export default function Frontmatter({ post, root }) {
       </h1>
       <div className="post-meta">
         <span className="post-date">{date}</span>
-        <span className="post-author">:: {author}</span>
+        <span className="post-author"> :: {author}</span>
       </div>
+      <span className="post-tags">
+        {tags &&
+          tags.map((tag) => (
+            <Link href={`/tags/${tag}`}>
+              <a>#{tag}</a>
+            </Link>
+          ))}
+      </span>
       {cover && <img src={cover} className="post-cover" alt={title} />}
       <div className="post-content">{description}</div>
     </>

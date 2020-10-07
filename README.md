@@ -122,18 +122,17 @@ Below is a list of features that have yet to be implemented in this port.
 I'll try to check them off as I go with the goal of eventually reaching
 parity with the original theme. Contributions welcome 😊
 
+- [ ] finish filling out meta tags in <head>
 - [ ] finish filling out README
 - [ ] configuration parity of `siteconfig.json` with `config.toml`
-- [ ] front-matter support
+- [ ] pagination for post
+- [x] front-matter support
   - [x] title
   - [x] date
   - [x] author
-  - [ ] authorTwitter
   - [x] cover
-  - [ ] tags
-  - [ ] keywords
+  - [x] tags
   - [x] description
-  - [ ] showFullContent
 - [ ] add-ons (disqus comments, extended header, extended footer)
 - [ ] syntax highlighting for code
 - [ ] mobile responsiveness

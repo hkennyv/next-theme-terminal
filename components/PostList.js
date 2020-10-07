@@ -5,7 +5,7 @@ export default function PostList({ posts }) {
   return (
     <div className="posts">
       {posts.map((post, idx) => (
-        <div className="post on-list">
+        <div key={idx} className="post on-list">
           <Frontmatter key={idx} post={post} root={"/posts"} />
           <div>
             <Link href={`/posts/${post.slug}`}>
