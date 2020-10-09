@@ -12,7 +12,7 @@ This port is still under development and has not reached feature parity
 with the original theme yet. See the [TODO](#todo) section for more
 information on the available features.
 
-### DEMO - https://hopeful-minsky-25f7e0.netlify.app/
+### DEMO - https://next-theme-terminal.vercel.app
 
 ---
 
@@ -37,7 +37,13 @@ A custom syntax highlighting based on PrismJS. All you need to do is to wrap you
 
 ## How to start
 
-**Option one:** One-click deploy
+**Option one:** One-click deploy on Vercel or Netlify
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/project?template=https://github.com/hkennyv/next-theme-terminal)
+
+(If you click this button, it will create a new repo for you that looks
+exactly like this one, and sets that repo up immediately for deployment
+on Vercel)
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/hkennyv/next-theme-terminal)
 
