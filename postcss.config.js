@@ -10,9 +10,10 @@ module.exports = {
         autoprefixer: {
           flexbox: "no-2009",
         },
-        stage: 3,
+        stage: 1,
+        preserve: true,
         features: {
-          "custom-properties": false,
+          "custom-properties": true,
         },
       },
     ],
