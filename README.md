@@ -133,8 +133,9 @@ parity with the original theme. Contributions welcome 😊
   - [ ] color
   - [x] menu configuration
   - [ ] pagination
-- [ ] pagination for post
-- [ ] tags page
+- [ ] pagination for posts
+- [ ] pagination for tags
+- [x] tags page
 - [x] footer
 - [x] front-matter support
   - [x] title
@@ -144,6 +145,7 @@ parity with the original theme. Contributions welcome 😊
   - [x] tags
   - [x] description
 - [ ] BUG: accent doesn't seem to be getting set for certain CSS classes (code tags, post-meta class)
+      it looks like converting the --accent css variable is converted improperly at runtime and doesn't change
 - [ ] add-ons (disqus comments, extended header, extended footer)
 - [ ] syntax highlighting for code
-- [ ] mobile responsiveness
+- [x] mobile responsiveness

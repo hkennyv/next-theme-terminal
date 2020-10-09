@@ -1,5 +1,11 @@
 :root {
-  --accent: #FFA86A;
+  /*
+   * need to comment this guy out because it looks like in some places, the
+   * PostCSS is getting processed at build-time and it doesn't change to the
+   * new color --accent, i _think_ a fix would be changing the colors that
+   * translate to: rgba(r, g, b, a) to not use the color-mod function
+   */
+  /* --accent: #FFA86A; */
   --background: color-mod(var(--accent) blend(#1D1E28 98%));
   --color: white;
   --border-color: rgba(255, 255, 255, .1);

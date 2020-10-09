@@ -45,3 +45,25 @@ export function getMarkdownSlugs(context) {
 
   return data;
 }
+
+export function getMarkdownTags(context) {
+  const keys = context.keys();
+  const values = keys.map(context);
+
+  const tagSet = new Set();
+
+  // get the tags from all the files
+  keys.map((key, idx) => {
+    const value = values[idx];
+    const document = matter(value.default);
+    const { tags } = document.data;
+
+    if (tags) {
+      for (let tag of tags) {
+        tagSet.add(tag);
+      }
+    }
+  });
+
+  return Array.from(tagSet);
+}
