@@ -6,13 +6,16 @@ This repository is a NextJS port of the popular hugo theme, [hugo-theme-terminal
 
 It uses [Next.js](https://nextjs.org/) v9.5.3 and was bootstrapped using
 [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-It also includes one-click instructions on how to [deploy to netlify](#how-to-start).
+It also includes one-click instructions on how to [deploy to Netlify](#how-to-start)
+or [deploy to Vercel](https://vercel.com/docs/more/deploy-button).
 
 This port is still under development and has not reached feature parity
 with the original theme yet. See the [TODO](#todo) section for more
 information on the available features.
 
-### DEMO - https://next-theme-terminal.vercel.app
+### DEMO VERCEL - https://next-theme-terminal.vercel.app
+
+### DEMO NETLIFY - https://hopeful-minsky-25f7e0.netlify.app/
 
 ---
 
