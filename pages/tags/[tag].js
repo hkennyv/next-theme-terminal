@@ -22,7 +22,7 @@ export async function getStaticProps({ ...context }) {
 
   // collect all of the markdown files in /content and transform them using
   // gray-matter to parse the YAML header and the markdown body
-  let ctx = require.context("../../content/posts", true, /\.md$/);
+  let ctx = require.context("../../content", true, /\.md$/);
   const posts = parseMarkdownFiles(ctx).filter(
     (post) => post.frontmatter.tags && post.frontmatter.tags.includes(tag)
   );
@@ -37,7 +37,7 @@ export async function getStaticProps({ ...context }) {
 }
 
 export async function getStaticPaths() {
-  const ctx = require.context("../../content/posts", true, /\.md$/);
+  const ctx = require.context("../../content", true, /\.md$/);
   const tags = getMarkdownTags(ctx);
 
   const paths = tags.map((tag) => `/tags/${tag}`);
