@@ -168,6 +168,17 @@ pre {
     padding: 0;
     font-size: inherit;
     border: none;
+
+    /*
+     * can remove these once we figure out how to properly use toolbar
+     * plugin with prisma (see .babelrc prisma config)
+     */
+    display: block;
+    color: inherit;
+    position: relative;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-top: 0;
   }
 }
 

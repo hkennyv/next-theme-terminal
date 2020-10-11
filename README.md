@@ -156,5 +156,8 @@ parity with the original theme. Contributions welcome 😊
 - [ ] BUG: accent doesn't seem to be getting set for certain CSS classes (code tags, post-meta class)
       it looks like converting the --accent css variable is converted improperly at runtime and doesn't change
 - [ ] add-ons (disqus comments, extended header, extended footer)
-- [ ] syntax highlighting for code
+- [ ] Prismjs parity
+  - [x] syntax highlighting for code
+  - [ ] code-toolbar plugin (plugin requires DOM -- react no likey)
+  - [ ] copy-to-clipboard plugin (plugin requires DOM -- react no likey)
 - [x] mobile responsiveness
