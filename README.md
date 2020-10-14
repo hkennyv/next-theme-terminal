@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a1d39bd7-cb99-4836-84c7-faf67832905f/deploy-status)](https://app.netlify.com/sites/silly-rosalind-354c27/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7626b1d0-7d78-4818-95f2-8dd67c2b3b4e/deploy-status)](https://app.netlify.com/sites/hopeful-minsky-25f7e0/deploys)
 
 # next-theme-terminal
 
