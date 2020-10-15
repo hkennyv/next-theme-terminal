@@ -1,0 +1,41 @@
+name: Format
+
+on: push
+
+jobs:
+  run-linters:
+    name: Run prettier
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run prettier
+        run: yarn format-check
+    #     uses: wearerequired/lint-action@v1
+    #     with:
+    #       github_token: ${{ secrets.github_token }}
+    #       # Enable your linters here
+    #       prettier: true
+    #       prettier_dir: web/
+
+    #   - name: Install dependencies for api/
+    #     run: |
+    #       cd api
+    #       yarn install
+    #   - name: Run prettier on api/
+    #     uses: wearerequired/lint-action@v1
+    #     with:
+    #       github_token: ${{ secrets.github_token }}
+    #       # Enable your linters here
+    #       prettier: true
+    #       prettier_dir: api/
