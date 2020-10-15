@@ -1,0 +1,9 @@
+# ignore assets from original theme so we have easy diffing
+# also ignore prism.js since it is from the prismjs website
+assets/
+utils/prism.js
+
+# don't mess with these dependency files
+.next/
+node_modules/
+pubilc/
