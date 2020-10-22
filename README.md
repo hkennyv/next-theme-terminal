@@ -240,7 +240,7 @@ parity with the original theme. Contributions welcome 😊
   - [ ] color
   - [x] menu configuration
   - [ ] pagination
-- [ ] pagination for posts
+- [x] pagination for posts
 - [ ] pagination for tags
 - [x] tags page
 - [x] footer
