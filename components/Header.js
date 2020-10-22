@@ -58,22 +58,28 @@ export default function Header({ logoText, menuItems, showMenuItems }) {
       {/* site.menus => menu.html */}
       <nav className={`menu${isMobile && !showMoreMobile ? " hidden" : ""}`}>
         <ul className="menu__inner menu__inner--desktop">
+          {/*
+           * render the shown menu items and render the hidden items (if there
+           * are any)
+           */}
           {renderMenuItems(shownItems)}
-          <ul className="menu__sub-inner">
-            <li
-              className="menu__sub-inner-more-trigger"
-              onClick={() => setShowMoreDesktop((prev) => !prev)}
-            >
-              Show more ▾
-            </li>
-            <ul
-              className={`menu__sub-inner-more${
-                showMoreDesktop ? "" : " hidden"
-              }`}
-            >
-              {renderMenuItems(hiddenItems)}
+          {hiddenItems.length > 0 && (
+            <ul className="menu__sub-inner">
+              <li
+                className="menu__sub-inner-more-trigger"
+                onClick={() => setShowMoreDesktop((prev) => !prev)}
+              >
+                Show more ▾
+              </li>
+              <ul
+                className={`menu__sub-inner-more${
+                  showMoreDesktop ? "" : " hidden"
+                }`}
+              >
+                {renderMenuItems(hiddenItems)}
+              </ul>
             </ul>
-          </ul>
+          )}
         </ul>
         <ul className="menu__inner menu__inner--mobile">
           {renderMenuItems(shownItems)}
