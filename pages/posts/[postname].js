@@ -1,12 +1,13 @@
+import Link from "next/link";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 
-import { getMarkdownSlugs } from "@utils/utils";
+import { getMarkdownSlugs, parseMarkdownFiles } from "@utils/utils";
 
 import Layout from "@components/Layout";
 import Frontmatter from "@components/Frontmatter";
 
-export default function Post({ config, post }) {
+export default function Post({ config, post, nextPost, prevPost }) {
   const { frontmatter, markdownBody, slug } = post;
 
   return (
@@ -18,27 +19,35 @@ export default function Post({ config, post }) {
         <Frontmatter post={post} root={"/posts"} />
         <ReactMarkdown source={markdownBody} />
       </div>
-      {/* TODO: implement pagination, sorted by dates */}
-      {/* <div className="pagination">
-        <div class="pagination__buttons">
-          <span className="button previous">
-            <Link href={`/posts/${getPrevPost()}`}>
-              <a>
-                <span class="button__icon">←</span>
-                <span class="button__text">Newer posts</span>
-              </a>
-            </Link>
-          </span>
-          <span className="button next">
-            <Link href={`/posts/${getNextPost()}`}>
-              <a>
-                <span class="button__text">Older posts</span>
-                <span class="button__icon">→</span>
-              </a>
-            </Link>
-          </span>
+      {/* pagination */}
+      <div className="pagination">
+        <div className="pagination__title">
+          <span className="pagination__title-h">Read other posts</span>
+          <hr />
         </div>
-      </div> */}
+        <div class="pagination__buttons">
+          {prevPost && (
+            <span className="button previous">
+              <Link href={`/posts/${prevPost.slug}`}>
+                <a>
+                  <span class="button__icon">←</span>
+                  <span class="button__text">{prevPost.slug}</span>
+                </a>
+              </Link>
+            </span>
+          )}
+          {nextPost && (
+            <span className="button next">
+              <Link href={`/posts/${nextPost.slug}`}>
+                <a>
+                  <span class="button__text">{nextPost.slug}</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </Link>
+            </span>
+          )}
+        </div>
+      </div>
     </Layout>
   );
 }
@@ -49,20 +58,23 @@ export async function getStaticProps({ ...context }) {
   // read config file
   const config = (await import(`../../siteconfig.json`)).default;
 
-  // construct post from corresponding markdown file
-  const content = await import(`../../content/posts/${postname}.md`);
-  const document = matter(content.default);
+  // read all posts
+  let ctx = require.context("../../content/posts", true, /\.md$/);
+  const posts = parseMarkdownFiles(ctx);
 
-  const post = {
-    frontmatter: document.data,
-    markdownBody: document.content,
-    slug: postname,
-  };
+  const postIndex = posts.findIndex((element) => element.slug === postname);
+  const post = posts[postIndex];
+  const nextPost = postIndex + 1 < posts.length ? posts[postIndex + 1] : null;
+  const prevPost = postIndex - 1 >= 0 ? posts[postIndex - 1] : null;
+
+  console.log(post.slug, nextPost?.slug, prevPost?.slug);
 
   return {
     props: {
       config,
       post,
+      nextPost,
+      prevPost,
     },
   };
 }

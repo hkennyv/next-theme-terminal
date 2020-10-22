@@ -5,7 +5,7 @@ export function parseMarkdownFile() {}
 /*
  * inputs a webpack.context object of markdown files and returns an array of
  * objects, each containing the frontmatter, markdownBody, and slug for the
- * corresponding markdown file
+ * corresponding markdown file sorted by date (descending)
  */
 export function parseMarkdownFiles(context) {
   // keys are the name(s) of the files and values are the contents of the file
@@ -14,17 +14,21 @@ export function parseMarkdownFiles(context) {
 
   // construct slug from the filename (key)
   // pass the file contents through matter to parse frontmatter and markdownBody
-  const data = keys.map((key, idx) => {
-    const slug = key.replace(/^.*[\\\/]/, "").slice(0, -3);
-    const value = values[idx];
-    const document = matter(value.default);
+  const data = keys
+    .map((key, idx) => {
+      const slug = key.replace(/^.*[\\\/]/, "").slice(0, -3);
+      const value = values[idx];
+      const document = matter(value.default);
 
-    return {
-      frontmatter: document.data,
-      markdownBody: document.content,
-      slug,
-    };
-  });
+      return {
+        frontmatter: document.data,
+        markdownBody: document.content,
+        slug,
+      };
+    })
+    .sort(
+      (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date) // sort descending date
+    );
 
   return data;
 }
