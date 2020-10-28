@@ -204,7 +204,7 @@ CSS is built using [PostCSS](https://postcss.org/) and can be found in
 
 ## Found a bug?
 
-If you spot any bugs, please use [Issue Tracker](https://github.com/hkennyv/next-theme-terminal/issues) or create a new [Pull Request](https://github.com/hkennyv/next-theme-terminal/pulls) to fix the issue.
+If you spot any bugs, please use the [Issue Tracker](https://github.com/hkennyv/next-theme-terminal/issues) or create a new [Pull Request](https://github.com/hkennyv/next-theme-terminal/pulls) to fix the issue.
 
 ## New cool idea or feature?
 
