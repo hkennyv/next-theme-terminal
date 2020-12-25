@@ -19,8 +19,22 @@ export default function Layout({ children, pageTitle, config, ...props }) {
   return (
     <>
       <Head>
-        <Meta description={subtitle} keywords={keywords} />
+        {/* use config.params.favicon if provided, otherwise fallback to the
+            provided themeColor icons in public/favicon/{color}.png */}
+        <link
+          rel="shortcut icon"
+          href={
+            params.favicon
+              ? `/${params.favicon}`
+              : `/favicon/${params.themeColor}.png`
+          }
+        />
 
+        {/* render all the meta tags in the header, still a WIP */}
+        <Meta description={subtitle} keywords={keywords} params={params} />
+
+        {/* if the page uses <Layout /> and supplies a `pageTitle` prop, use
+            that. otherwise, fallback to the default `config.title` */}
         <title>{pageTitle || title}</title>
       </Head>
       <div className={"container headings--one-size"}>
