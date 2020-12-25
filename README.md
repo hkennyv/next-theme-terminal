@@ -109,7 +109,7 @@ yarn dev
 To configure the site, edit the `siteconfig.json` file. This allows you to
 customize the site at build time without having to modify any code at all.
 
-Here is a complete sample file:
+Here is a complete sample file (used for the sample site):
 
 ```json
 {
@@ -149,7 +149,7 @@ Here is a complete sample file:
 ```
 
 You can edit the settings here and have changes reflected direclty in your site
-(changes in `siteConfig.json` won't be reflected until you restart your
+(changes in `siteConfig.json` may not be reflected until you restart your
 development server).
 
 ## Post archetype
