@@ -259,3 +259,4 @@ parity with the original theme. Contributions welcome 😊
   - [ ] code-toolbar plugin (plugin requires DOM -- react no likey)
   - [ ] copy-to-clipboard plugin (plugin requires DOM -- react no likey)
 - [x] mobile responsiveness
+- [ ] localization and multi-language support (languageSelector)
