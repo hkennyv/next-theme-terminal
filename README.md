@@ -1,5 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7626b1d0-7d78-4818-95f2-8dd67c2b3b4e/deploy-status)](https://app.netlify.com/sites/hopeful-minsky-25f7e0/deploys)
 ![Github Actions - Format](https://github.com/hkennyv/next-theme-terminal/workflows/Format/badge.svg)
+![Github Actions - Build](https://github.com/hkennyv/next-theme-terminal/workflows/Build/badge.svg)
 
 # next-theme-terminal
 
