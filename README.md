@@ -1,5 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7626b1d0-7d78-4818-95f2-8dd67c2b3b4e/deploy-status)](https://app.netlify.com/sites/hopeful-minsky-25f7e0/deploys)
 ![Github Actions - Format](https://github.com/hkennyv/next-theme-terminal/workflows/Format/badge.svg)
+![Github Actions - Build](https://github.com/hkennyv/next-theme-terminal/workflows/Build/badge.svg)
 
 # next-theme-terminal
 
@@ -108,7 +109,7 @@ yarn dev
 To configure the site, edit the `siteconfig.json` file. This allows you to
 customize the site at build time without having to modify any code at all.
 
-Here is a complete sample file:
+Here is a complete sample file (used for the sample site):
 
 ```json
 {
@@ -148,7 +149,7 @@ Here is a complete sample file:
 ```
 
 You can edit the settings here and have changes reflected direclty in your site
-(changes in `siteConfig.json` won't be reflected until you restart your
+(changes in `siteConfig.json` may not be reflected until you restart your
 development server).
 
 ## Post archetype
@@ -204,7 +205,7 @@ CSS is built using [PostCSS](https://postcss.org/) and can be found in
 
 ## Found a bug?
 
-If you spot any bugs, please use [Issue Tracker](https://github.com/hkennyv/next-theme-terminal/issues) or create a new [Pull Request](https://github.com/hkennyv/next-theme-terminal/pulls) to fix the issue.
+If you spot any bugs, please use the [Issue Tracker](https://github.com/hkennyv/next-theme-terminal/issues) or create a new [Pull Request](https://github.com/hkennyv/next-theme-terminal/pulls) to fix the issue.
 
 ## New cool idea or feature?
 
@@ -259,3 +260,4 @@ parity with the original theme. Contributions welcome 😊
   - [ ] code-toolbar plugin (plugin requires DOM -- react no likey)
   - [ ] copy-to-clipboard plugin (plugin requires DOM -- react no likey)
 - [x] mobile responsiveness
+- [ ] localization and multi-language support (languageSelector)
