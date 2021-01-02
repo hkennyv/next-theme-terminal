@@ -1,5 +1,6 @@
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
+import gfm from "remark-gfm";
 
 import { getMarkdownSlugs } from "@utils/utils";
 
@@ -16,7 +17,7 @@ export default function Page({ config, post }) {
     >
       <div className="post">
         <Frontmatter post={post} root={""} />
-        <ReactMarkdown source={markdownBody} />
+        <ReactMarkdown plugins={[gfm]} source={markdownBody} />
       </div>
     </Layout>
   );

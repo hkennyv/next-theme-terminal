@@ -48,12 +48,14 @@ export default function Header({ logoText, menuItems, showMenuItems }) {
             <div className="logo">{logoText}</div>
           </a>
         </div>
-        <div
-          className={`menu-trigger${isMobile ? "" : " hidden"}`}
-          onClick={() => setShowMoreMobile((prev) => !prev)}
-        >
-          menu
-        </div>
+        {!!menuItems.length && (
+          <div
+            className={`menu-trigger${isMobile ? "" : " hidden"}`}
+            onClick={() => setShowMoreMobile((prev) => !prev)}
+          >
+            menu
+          </div>
+        )}
       </div>
       {/* site.menus => menu.html */}
       <nav className={`menu${isMobile && !showMoreMobile ? " hidden" : ""}`}>

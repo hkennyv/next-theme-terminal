@@ -14,7 +14,8 @@ code.language-scss,
 .token.statement,
 .token.regex,
 .token.atrule,
-.token.number {
+.token.number,
+.token.inserted {
   color: var(--accent);
 }
 
