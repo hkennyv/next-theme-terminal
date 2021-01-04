@@ -20,6 +20,13 @@ export function parseMarkdownFiles(context) {
       const value = values[idx];
       const document = matter(value.default);
 
+      // handle the fringe case where the `date` field in the frontmatter can
+      // be a Date object and convert it to a string in the format:
+      //    YYYY-MM-DD
+      if (document.data.date && document.data.date instanceof Date) {
+        document.data.date = dateToString(document.data.date);
+      }
+
       return {
         frontmatter: document.data,
         markdownBody: document.content,
@@ -70,4 +77,17 @@ export function getMarkdownTags(context) {
   });
 
   return Array.from(tagSet);
+}
+
+/*
+ * takes in a Date object and returns a string in the format:
+ *    YYYY-MM-DD
+ */
+export function dateToString(date) {
+  // see the mdn docs for Date for more details:
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+
+  return `${date.getFullYear()}-${("0" + (date.getMonth() + 1)).slice(-2)}-${(
+    "0" + date.getDate()
+  ).slice(-2)}`;
 }
