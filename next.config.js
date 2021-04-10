@@ -7,4 +7,8 @@ module.exports = {
     });
     return config;
   },
+  // https://nextjs.org/docs/messages/webpack5
+  future: {
+    webpack5: true,
+  },
 };
