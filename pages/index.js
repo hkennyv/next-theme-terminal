@@ -23,7 +23,12 @@ export async function getStaticProps() {
 
   // collect all of the markdown files in /content and transform them using
   // gray-matter to parse the YAML header and the markdown body
-  let ctx = require.context("../content/posts", true, /\.md$/);
+  //
+  // NOTE: when using webpack 5, you _must_ match on the `./` at the beginning
+  // of the filename, otherwise webpack will output duplicate filepaths
+  //
+  // see: https://github.com/webpack/webpack/issues/12087
+  let ctx = require.context("../content/posts", true, /\.\/.*\.md$/);
   const posts = parseMarkdownFiles(ctx);
 
   return {
