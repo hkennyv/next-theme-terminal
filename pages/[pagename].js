@@ -48,7 +48,7 @@ export async function getStaticProps({ ...context }) {
 }
 
 export async function getStaticPaths() {
-  const ctx = require.context("../content/pages", true, /\.md$/);
+  const ctx = require.context("../content/pages", true, /\.\/.*\.md$/);
 
   const slugs = getMarkdownSlugs(ctx);
   const paths = slugs.map((slug) => `/${slug}`);

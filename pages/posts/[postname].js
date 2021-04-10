@@ -14,7 +14,7 @@ export default function Post({ config, post, nextPost, prevPost }) {
   return (
     <Layout
       config={config}
-      pageTitle={`${frontmatter.title} :: ${config.name}`}
+      pageTitle={`${frontmatter.title} :: ${config.title}`}
     >
       <div className="post">
         <Frontmatter post={post} root={"/posts"} />
@@ -60,7 +60,7 @@ export async function getStaticProps({ ...context }) {
   const config = (await import(`../../siteconfig.json`)).default;
 
   // read all posts
-  let ctx = require.context("../../content/posts", true, /\.md$/);
+  let ctx = require.context("../../content/posts", true, /\.\/.*\.md$/);
   const posts = parseMarkdownFiles(ctx);
 
   const postIndex = posts.findIndex((element) => element.slug === postname);
@@ -81,7 +81,7 @@ export async function getStaticProps({ ...context }) {
 }
 
 export async function getStaticPaths() {
-  const ctx = require.context("../../content/posts", true, /\.md$/);
+  const ctx = require.context("../../content/posts", true, /\.\/.*\.md$/);
   const slugs = getMarkdownSlugs(ctx);
   const paths = slugs.map((slug) => `/posts/${slug}`);
 
