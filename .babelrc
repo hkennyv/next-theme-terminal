@@ -4,7 +4,16 @@
     [
       "prismjs",
       {
-        "languages": ["javascript", "css", "markup"]
+        "languages": [
+          "bash",
+          "clike",
+          "css",
+          "go",
+          "javascript",
+          "markup",
+          "python",
+          "rust"
+        ]
         // "plugins": ["copy-to-clipboard", "toolbar"]
       }
     ]
