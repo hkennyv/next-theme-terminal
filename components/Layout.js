@@ -45,16 +45,8 @@ function getMeta({ authorTwitter, description, keywords, params }) {
 }
 
 export default function Layout({ children, pageTitle, config, ...props }) {
-  const {
-    title,
-    subtitle,
-    keywords,
-    copyright,
-    homepage,
-    logo,
-    menu,
-    params,
-  } = config;
+  const { title, subtitle, keywords, copyright, homepage, logo, menu, params } =
+    config;
 
   return (
     <>
