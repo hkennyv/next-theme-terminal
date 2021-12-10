@@ -18,7 +18,7 @@ export default function Post({ config, post, nextPost, prevPost }) {
     >
       <div className="post">
         <Frontmatter post={post} root={"/posts"} />
-        <ReactMarkdown plugins={[gfm]} source={markdownBody} />
+        <ReactMarkdown plugins={[gfm]} children={markdownBody} />
       </div>
       {/* pagination */}
       <div className="pagination">

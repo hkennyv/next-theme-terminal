@@ -17,7 +17,7 @@ export default function Page({ config, post }) {
     >
       <div className="post">
         <Frontmatter post={post} root={""} />
-        <ReactMarkdown plugins={[gfm]} source={markdownBody} />
+        <ReactMarkdown plugins={[gfm]} children={markdownBody} />
       </div>
     </Layout>
   );
